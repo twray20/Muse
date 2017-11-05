@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace Muse
 {
     partial class Form1
     {
