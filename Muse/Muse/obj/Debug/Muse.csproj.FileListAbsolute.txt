@@ -1,0 +1,2 @@
+C:\Users\Thomas\Documents\CMPS 453\Muse\WindowsFormsApplication1\Muse\bin\Debug\Muse.exe.config
+C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\bin\Debug\Muse.exe.config
