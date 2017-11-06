@@ -9,10 +9,11 @@ namespace Muse
     class Global
     {
         public Song[] songList;
+        public SongRating[] ratingList;
 
         public Song getSong(int songID)
         {
-            foreach(Song song in songList)
+            foreach (Song song in songList)
             {
                 if (songID == song.getID())
                 {
@@ -22,15 +23,21 @@ namespace Muse
             return new Song();
         }
 
-        public void changeRating(int songID, int rating)
+        public void changeRating(int userID, int songID, int rating)
         {
-            Song song = getSong(songID);
-            int newNum, newAvg;
-            newNum = song.getNumRatings();
-            newAvg = song.getAvgRating();
-            newAvg = ((newAvg * newNum) + rating) / (newNum + 1);
-            song.setAvgRating(newAvg);
-            song.setNumRatings(newNum + 1);
+
+            foreach (SongRating r in ratingList)
+            {
+                if (userID == r.getUserID() && songID==r.getSongID())
+                {
+                    r.updateRating(rating);
+                    return;
+                }
+            }
+
+            SongRating newRating = new SongRating(userID, songID, rating);
         }
+
     }
 }
+
