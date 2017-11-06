@@ -14,8 +14,20 @@ namespace Muse
         private int songLength;
         private int songYear;
         //private Descriptor[] descriptors;
-        private int numRatings;         //How many people have rated the song
-        private int avgRating;          //Average total rating of the song
+
+        public Song()
+        {
+            songID = -1;
+        }
+
+        public Song(int sID, String songName, String artist, int songLength, int songYear)
+        {
+            this.songID = sID;
+            this.songName = songName;
+            this.artist = artist;
+            this.songLength = songLength;
+            this.songYear = songYear;
+        }
 
         public int getID()
         {
@@ -46,28 +58,6 @@ namespace Muse
         //{
         //    return descriptors;
         //}
-
-        public int getNumRatings()
-        {
-            return numRatings;
-        }
-
-        public int getAvgRating()
-        {
-            return avgRating;
-        }
-
-        public void setAvgRating(int newAvg)
-        {
-            this.avgRating = newAvg;
-        }
-
-        public void setNumRatings(int newNum)
-        {
-            this.numRatings = newNum;
-        }
-
-
 
     }
 }
