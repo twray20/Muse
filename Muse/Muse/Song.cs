@@ -13,7 +13,7 @@ namespace Muse
         private String artist;
         private int songLength;
         private int songYear;
-        //private Descriptor[] descriptors;
+        //private List<Descriptor> descriptors;
 
         public Song()
         {
@@ -54,7 +54,7 @@ namespace Muse
             return songYear;
         }
 
-        //public Descriptor[] getDescriptors()
+        //public List<Descriptor> getDescriptors()
         //{
         //    return descriptors;
         //}
