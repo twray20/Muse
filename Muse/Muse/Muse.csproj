@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller.cs" />
+    <Compile Include="SongDescriptor.cs" />
+    <Compile Include="Keyword.cs" />
     <Compile Include="Song.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

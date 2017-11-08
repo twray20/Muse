@@ -11,12 +11,14 @@ namespace Muse
         public List<User> userList;
         public List<Song> songList;
         public List<SongRating> ratingList;
+        public List<Keyword> genreList;
 
         public Controller()
         {
             userList = new List<User>();
             songList = new List<Song>();
             ratingList = new List<SongRating>();
+            genreList = new List<Keyword>();
         }
 
         //Retrieves the song object for a song with id songID
@@ -35,16 +37,14 @@ namespace Muse
         //Lets a user (userID) input a rating (rating) for a song (songID)
         public void changeRating(int userID, int songID, int rating)
         {
-
             foreach (SongRating r in ratingList)
             {
-                if (userID == r.getUserID() && songID==r.getSongID())
+                if (userID == r.getUserID() && songID == r.getSongID())
                 {
                     r.updateRating(rating);
                     return;
                 }
             }
-
             SongRating newRating = new SongRating(userID, songID, rating);
         }
 
@@ -60,6 +60,27 @@ namespace Muse
                 }
             }
             return usersRatings;
+        }
+
+        //Retrieves list of songs that have been defined as having genre (genre)
+        public List<Song> getSongsWithGenre(String genre)
+        {
+            List<Song> songsWithGenre = new List<Song>();
+
+            foreach (Song s in songList)
+            {
+                List<SongDescriptor> descriptors = s.getDescriptors();
+                foreach (SongDescriptor d in descriptors)
+                {
+                    if (d.getKeyWord().getKeyName() == genre)
+                    {
+                        //if (d.getApprovals() > x) where x is number of approvals before song is considered to belong to a genre
+                        songsWithGenre.Add(s);
+                    }
+                }
+            }
+
+            return songsWithGenre;
         }
 
     }

@@ -1,2 +1,10 @@
 C:\Users\Thomas\Documents\CMPS 453\Muse\WindowsFormsApplication1\Muse\bin\Debug\Muse.exe.config
 C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\bin\Debug\Muse.exe.config
+C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\bin\Debug\Muse.exe
+C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\bin\Debug\Muse.pdb
+C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\obj\Debug\Muse.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\obj\Debug\Muse.Form1.resources
+C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\obj\Debug\Muse.Properties.Resources.resources
+C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\obj\Debug\Muse.csproj.GenerateResource.Cache
+C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\obj\Debug\Muse.exe
+C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\obj\Debug\Muse.pdb
