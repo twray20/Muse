@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Muse
 {
-    class Song
+    public class Song
     {
         private int songID;     //Unique song ID to identify the song and retrieve information about it
         private String songName;

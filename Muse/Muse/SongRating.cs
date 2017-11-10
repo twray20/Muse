@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Muse
 {
-    class SongRating
+    public class SongRating
     {
         private int userID;
         private int songID;

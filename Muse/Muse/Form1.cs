@@ -10,11 +10,37 @@ using System.Windows.Forms;
 
 namespace Muse
 {
-    public partial class Form1 : Form
+    public partial class MuseLogin : Form
     {
-        public Form1()
+
+        private Controller controller;
+
+        public MuseLogin()
         {
             InitializeComponent();
+        }
+
+        private void PasswordBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+
+            Controller c = new Controller();
+            User u = new User(0, UsernameBox.Text);
+            c.userList.Add(u);
+
+            this.Hide();
+            var form2 = new Form2(c);
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
+        }
+
+        private void UsernameBox_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
