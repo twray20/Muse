@@ -8,6 +8,7 @@ C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\obj\Debug\Muse.Properties.Reso
 C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\obj\Debug\Muse.csproj.GenerateResource.Cache
 C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\obj\Debug\Muse.exe
 C:\Users\Thomas\Documents\CMPS 453\Muse\Muse\Muse\obj\Debug\Muse.pdb
+<<<<<<< HEAD
 C:\Users\ajl5193\Documents\GitHub\Muse\Muse\Muse\bin\Debug\Muse.exe.config
 C:\Users\ajl5193\Documents\GitHub\Muse\Muse\Muse\bin\Debug\Muse.exe
 C:\Users\ajl5193\Documents\GitHub\Muse\Muse\Muse\bin\Debug\Muse.pdb
@@ -17,3 +18,14 @@ C:\Users\ajl5193\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.Properties.Resou
 C:\Users\ajl5193\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.csproj.GenerateResource.Cache
 C:\Users\ajl5193\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.exe
 C:\Users\ajl5193\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.pdb
+=======
+C:\Users\tcw9331\Documents\GitHub\Muse\Muse\Muse\bin\Debug\Muse.exe.config
+C:\Users\tcw9331\Documents\GitHub\Muse\Muse\Muse\bin\Debug\Muse.exe
+C:\Users\tcw9331\Documents\GitHub\Muse\Muse\Muse\bin\Debug\Muse.pdb
+C:\Users\tcw9331\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.csprojResolveAssemblyReference.cache
+C:\Users\tcw9331\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.Form1.resources
+C:\Users\tcw9331\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.Properties.Resources.resources
+C:\Users\tcw9331\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.csproj.GenerateResource.Cache
+C:\Users\tcw9331\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.exe
+C:\Users\tcw9331\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.pdb
+>>>>>>> ac28ab57095fe34d5362d566d3aee863f5e316e5

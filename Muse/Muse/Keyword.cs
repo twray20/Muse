@@ -10,6 +10,16 @@ namespace Muse
     {
         private String keyName;
 
+        public Keyword()
+        {
+            keyName = " ";
+        }
+
+        public Keyword(String keyName)
+        {
+            this.keyName = keyName;
+        }
+
         public String getKeyName()
         {
             return keyName;
