@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Muse
 {
-    class Song
+    public class Song
     {
         private int songID;     //Unique song ID to identify the song and retrieve information about it
         private String songName;
         private String artist;
-        private int songLength;
-        private int songYear;
+        private String songLength;
+        private String songYear;
         private List<SongDescriptor> descriptors;
 
         public Song()
@@ -20,9 +20,9 @@ namespace Muse
             songID = -1;
         }
 
-        public Song(int sID, String songName, String artist, int songLength, int songYear)
+        public Song(int sID, String songName, String artist, String songLength, String songYear)
         {
-            this.songID = sID;
+           // this.songID = sID;
             this.songName = songName;
             this.artist = artist;
             this.songLength = songLength;
@@ -44,12 +44,12 @@ namespace Muse
             return artist;
         }
 
-        public int getSongLength()
+        public String getSongLength()
         {
             return songLength;
         }
 
-        public int getSongYear()
+        public String getSongYear()
         {
             return songYear;
         }
