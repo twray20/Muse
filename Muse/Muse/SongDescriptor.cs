@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Muse
 {
-    class SongDescriptor
+    public class SongDescriptor
     {
         private Keyword keyWord;
         private int songID;

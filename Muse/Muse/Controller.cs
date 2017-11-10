@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Muse
 {
-    class Controller
+    public class Controller
     {
         public List<User> userList;
         public List<Song> songList;

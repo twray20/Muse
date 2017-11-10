@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace Muse
 {
-    class Keyword
+    public class Keyword
     {
         private String keyName;
+
+        public Keyword()
+        {
+            keyName = " ";
+        }
+
+        public Keyword(String keyName)
+        {
+            this.keyName = keyName;
+        }
 
         public String getKeyName()
         {
