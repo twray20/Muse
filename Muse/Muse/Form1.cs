@@ -25,22 +25,24 @@ namespace Muse
             controller = new Controller();
             InitializeUsers();
             InitializeGenres();
-            InitilizeSongDB();
-            foreach(Song s in controller.songList)
-            {
-                Console.WriteLine(s.getName() + "|" + s.getArtist() + "|" + s.getSongLength() + "|" + s.getSongYear());
-            }
+            InitializeSongDB();
+            InitializeRatings();
+            controller.getNewSong(0);
         }
 
-        private void InitilizeSongDB()
+        private void InitializeSongDB()
         {
             string[] TextDB = System.IO.File.ReadAllLines("../../song_sample.txt");
             for (int i = 0; i < TextDB.Length; i += 4)
             {
                 Song s = new Song(controller.songList.Count, TextDB[i], TextDB[i + 1], TextDB[i + 2], TextDB[i + 3]);
                 controller.songList.Add(s);
-
             }
+
+            controller.songList[0].addDescriptor(controller.genreList[5]);
+            controller.songList[1].addDescriptor(controller.genreList[5]);
+            controller.songList[2].addDescriptor(controller.genreList[5]);
+            controller.songList[3].addDescriptor(controller.genreList[5]);
         }
 
         //Create some user accounts and initialize them for use in project
@@ -60,7 +62,7 @@ namespace Muse
 
         //Create list of genres and initialize them for use in project
         private void InitializeGenres()
-        {           
+        {
             controller.genreList.Add(new Keyword("Jazz"));
             controller.genreList.Add(new Keyword("Progressive Rock"));
             controller.genreList.Add(new Keyword("New wave"));
@@ -72,7 +74,15 @@ namespace Muse
         //Creates some song ratings for each user and initialize them for use in project
         private void InitializeRatings()
         {
-
+            controller.changeRating(0, 0, 4);
+            controller.changeRating(0, 1, 4);
+            controller.changeRating(0, 2, 5);
+            controller.changeRating(0, 3, 5);
+            controller.changeRating(1, 2, 1);
+            controller.changeRating(2, 2, 2);
+            controller.changeRating(3, 2, 3);
+            controller.changeRating(4, 2, 4);
+            controller.changeRating(0, 3, 1);
         }
     }
 }
