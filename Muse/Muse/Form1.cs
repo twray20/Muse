@@ -25,22 +25,46 @@ namespace Muse
             controller = new Controller();
             InitializeUsers();
             InitializeGenres();
-            InitilizeSongDB();
-            foreach(Song s in controller.songList)
-            {
-                Console.WriteLine(s.getName() + "|" + s.getArtist() + "|" + s.getSongLength() + "|" + s.getSongYear());
-            }
+            InitializeSongDB();
+            InitializeRatings();
+            Console.WriteLine(controller.getRecommendation(0).getID());
         }
 
-        private void InitilizeSongDB()
+        private void InitializeSongDB()
         {
             string[] TextDB = System.IO.File.ReadAllLines("../../song_sample.txt");
             for (int i = 0; i < TextDB.Length; i += 4)
             {
-                Song s = new Song(controller.songList.Count, TextDB[i], TextDB[i + 1], TextDB[i + 2], TextDB[i + 3]);
-                controller.songList.Add(s);
-
+                int id = controller.songList.Count;
+                Song s = new Song(id, TextDB[i], TextDB[i + 1], TextDB[i + 2], TextDB[i + 3]);
+                controller.songList.Add(s);                
             }
+
+            controller.songList[0].addDescriptor(controller.genreList[5]);
+            controller.songList[1].addDescriptor(controller.genreList[5]);
+            controller.songList[2].addDescriptor(controller.genreList[5]);
+            controller.songList[3].addDescriptor(controller.genreList[5]);
+            controller.songList[4].addDescriptor(controller.genreList[2]);
+            controller.songList[5].addDescriptor(controller.genreList[2]);
+            controller.songList[6].addDescriptor(controller.genreList[2]);
+            controller.songList[7].addDescriptor(controller.genreList[2]);
+            controller.songList[8].addDescriptor(controller.genreList[0]);
+            controller.songList[9].addDescriptor(controller.genreList[0]);
+            controller.songList[10].addDescriptor(controller.genreList[0]);
+            controller.songList[11].addDescriptor(controller.genreList[0]);
+            controller.songList[12].addDescriptor(controller.genreList[4]);
+            controller.songList[13].addDescriptor(controller.genreList[4]);
+            controller.songList[14].addDescriptor(controller.genreList[4]);
+            controller.songList[15].addDescriptor(controller.genreList[4]);
+            controller.songList[16].addDescriptor(controller.genreList[1]);
+            controller.songList[17].addDescriptor(controller.genreList[1]);
+            controller.songList[18].addDescriptor(controller.genreList[1]);
+            controller.songList[19].addDescriptor(controller.genreList[1]);
+            controller.songList[20].addDescriptor(controller.genreList[3]);
+            controller.songList[21].addDescriptor(controller.genreList[3]);
+            controller.songList[22].addDescriptor(controller.genreList[3]);
+            controller.songList[23].addDescriptor(controller.genreList[3]);
+
         }
 
         //Create some user accounts and initialize them for use in project
@@ -60,13 +84,13 @@ namespace Muse
 
         //Create list of genres and initialize them for use in project
         private void InitializeGenres()
-        {           
-            controller.genreList.Add(new Keyword("Jazz"));
-            controller.genreList.Add(new Keyword("Progressive Rock"));
-            controller.genreList.Add(new Keyword("New wave"));
-            controller.genreList.Add(new Keyword("Pop"));
-            controller.genreList.Add(new Keyword("Electronic"));
-            controller.genreList.Add(new Keyword("Hip hop"));
+        {
+            controller.genreList.Add(new Genre("Jazz"));
+            controller.genreList.Add(new Genre("Progressive Rock"));
+            controller.genreList.Add(new Genre("New wave"));
+            controller.genreList.Add(new Genre("Pop"));
+            controller.genreList.Add(new Genre("Electronic"));
+            controller.genreList.Add(new Genre("Hip hop"));
         }
 
         //Creates some song ratings for each user and initialize them for use in project
@@ -135,8 +159,6 @@ namespace Muse
             controller.changeRating(4, 18, 1);
             controller.changeRating(4, 21, 4);
             controller.changeRating(4, 22, 1);
-            
-
         }
     }
 }

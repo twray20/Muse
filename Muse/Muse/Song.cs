@@ -18,15 +18,17 @@ namespace Muse
         public Song()
         {
             songID = -1;
+            descriptors = new List<SongDescriptor>();
         }
 
-        public Song(int sID, String songName, String artist, String songLength, String songYear)
+        public Song(int songID, String songName, String artist, String songLength, String songYear)
         {
-           // this.songID = sID;
+            this.songID = songID;
             this.songName = songName;
             this.artist = artist;
             this.songLength = songLength;
             this.songYear = songYear;
+            descriptors = new List<SongDescriptor>();
         }
 
         public int getID()
@@ -57,6 +59,19 @@ namespace Muse
         public List<SongDescriptor> getDescriptors()
         {
             return descriptors;
+        }
+
+        public void addDescriptor(Genre k)
+        {
+            foreach (SongDescriptor d in descriptors)
+            {
+                if (d.getGenre().getGenreName() == k.getGenreName())
+                {
+                    d.approveSong();
+                }
+            }
+            SongDescriptor newDescriptor = new SongDescriptor(this.songID, k);
+            descriptors.Add(newDescriptor);
         }
 
     }
