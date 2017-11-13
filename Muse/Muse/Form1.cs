@@ -72,6 +72,70 @@ namespace Muse
         //Creates some song ratings for each user and initialize them for use in project
         private void InitializeRatings()
         {
+            controller.changeRating(0, 0, 3);
+            controller.changeRating(0, 3, 4);
+            controller.changeRating(0, 5, 1);
+            controller.changeRating(0, 6, 5);
+            controller.changeRating(0, 9, 2);
+            controller.changeRating(0, 11, 3);
+            controller.changeRating(0, 16, 4);
+            controller.changeRating(0, 18, 1);
+            controller.changeRating(0, 21, 3);
+            controller.changeRating(0, 23, 4);
+
+            controller.changeRating(1, 1, 4);
+            controller.changeRating(1, 2, 3);
+            controller.changeRating(1, 4, 3);
+            controller.changeRating(1, 7, 4);
+            controller.changeRating(1, 8, 2);
+            controller.changeRating(1, 10, 5);
+            controller.changeRating(1, 13, 1);
+            controller.changeRating(1, 15, 1);
+            controller.changeRating(1, 17, 2);
+            controller.changeRating(1, 19, 5);
+            controller.changeRating(1, 22, 4);
+            controller.changeRating(1, 23, 3);
+            
+            controller.changeRating(2, 1, 4);
+            controller.changeRating(2, 2, 1);
+            controller.changeRating(2, 4, 4);
+            controller.changeRating(2, 5, 2);
+            controller.changeRating(2, 8, 3);
+            controller.changeRating(2, 10, 4);
+            controller.changeRating(2, 11, 4);
+            controller.changeRating(2, 13, 4);
+            controller.changeRating(2, 14, 5);
+            controller.changeRating(2, 16, 4);
+            controller.changeRating(2, 17, 1);
+            controller.changeRating(2, 20, 1);
+            controller.changeRating(2, 22, 1);
+            
+            controller.changeRating(3, 2, 4);
+            controller.changeRating(3, 3, 2);
+            controller.changeRating(3, 4, 4);
+            controller.changeRating(3, 7, 4);
+            controller.changeRating(3, 10, 3);
+            controller.changeRating(3, 11, 5);
+            controller.changeRating(3, 12, 4);
+            controller.changeRating(3, 15, 3);
+            controller.changeRating(3, 16, 4);
+            controller.changeRating(3, 19, 5);
+            controller.changeRating(3, 22, 5);
+            controller.changeRating(3, 23, 2);
+            
+            controller.changeRating(4, 1, 1);
+            controller.changeRating(4, 2, 1);
+            controller.changeRating(4, 4, 1);
+            controller.changeRating(4, 5, 4);
+            controller.changeRating(4, 9, 4);
+            controller.changeRating(4, 10, 1);
+            controller.changeRating(4, 12, 4);
+            controller.changeRating(4, 14, 1);
+            controller.changeRating(4, 17, 4);
+            controller.changeRating(4, 18, 1);
+            controller.changeRating(4, 21, 4);
+            controller.changeRating(4, 22, 1);
+            
 
         }
     }
