@@ -10,3 +10,4 @@ C:\Users\hjk7013\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.csproj.GenerateR
 C:\Users\hjk7013\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.exe
 C:\Users\hjk7013\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.pdb
 C:\Users\hjk7013\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.Form2.resources
+C:\Users\hjk7013\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.Form3.resources

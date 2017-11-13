@@ -55,5 +55,16 @@ namespace Muse
         {
             Application.Exit();
         }
+
+        private void RateSongsButton_Click(object sender, EventArgs e)
+        {
+
+            Controller c = new Controller();
+
+            this.Hide();
+            var form3 = new Form3(c);
+            form3.Closed += (s, args) => this.Close();
+            form3.Show();
+        }
     }
 }

@@ -115,6 +115,7 @@
             this.RateSongsButton.TabIndex = 5;
             this.RateSongsButton.Text = "Rate Songs";
             this.RateSongsButton.UseVisualStyleBackColor = true;
+            this.RateSongsButton.Click += new System.EventHandler(this.RateSongsButton_Click);
             // 
             // SomethingLikedButton
             // 
@@ -166,7 +167,7 @@
             this.Advertisement1Label.Location = new System.Drawing.Point(375, 262);
             this.Advertisement1Label.MaximumSize = new System.Drawing.Size(270, 0);
             this.Advertisement1Label.Name = "Advertisement1Label";
-            this.Advertisement1Label.Size = new System.Drawing.Size(247, 40);
+            this.Advertisement1Label.Size = new System.Drawing.Size(243, 40);
             this.Advertisement1Label.TabIndex = 10;
             this.Advertisement1Label.Text = "Rating more songs leads to more accurate recommendations!";
             this.Advertisement1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,7 +201,10 @@
             this.Controls.Add(this.ProfileLabel);
             this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.TimeLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form2";
             this.Text = "Muse Home";
             this.Load += new System.EventHandler(this.Form2_Load);
