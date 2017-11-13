@@ -8,7 +8,7 @@ namespace Muse
 {
     public class SongDescriptor
     {
-        private Keyword keyWord;
+        private Genre genre;
         private int songID;
         private int approvals;  //How many people agree that this descriptor matches the song
 
@@ -17,16 +17,16 @@ namespace Muse
             songID = -1;
         }
 
-        public SongDescriptor(int songID, Keyword keyWord)
+        public SongDescriptor(int songID, Genre genre)
         {
             this.songID = songID;
-            this.keyWord = keyWord;
+            this.genre = genre;
             this.approvals = 1;
         }
 
-        public Keyword getKeyWord()
+        public Genre getGenre()
         {
-            return this.keyWord;
+            return this.genre;
         }
 
         public int getSongID()

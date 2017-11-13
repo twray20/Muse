@@ -21,8 +21,9 @@ namespace Muse
             descriptors = new List<SongDescriptor>();
         }
 
-        public Song(int sID, String songName, String artist, String songLength, String songYear)
+        public Song(int songID, String songName, String artist, String songLength, String songYear)
         {
+            this.songID = songID;
             this.songName = songName;
             this.artist = artist;
             this.songLength = songLength;
@@ -60,11 +61,11 @@ namespace Muse
             return descriptors;
         }
 
-        public void addDescriptor(Keyword k)
+        public void addDescriptor(Genre k)
         {
             foreach (SongDescriptor d in descriptors)
             {
-                if (d.getKeyWord().getKeyName() == k.getKeyName())
+                if (d.getGenre().getGenreName() == k.getGenreName())
                 {
                     d.approveSong();
                 }
