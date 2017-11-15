@@ -13,6 +13,8 @@ namespace Muse
     public partial class Form3 : Form
     {
 
+        List<string> songs = new List<string>();
+
         private Controller controller;
 
         public Form3()
@@ -24,6 +26,12 @@ namespace Muse
         {
             controller = c;
             InitializeComponent();
+
+            songs.Add("One");
+            songs.Add("Two");
+            songs.Add("Three");
+
+            songList.DataSource = songs;
         }
     }
 }
