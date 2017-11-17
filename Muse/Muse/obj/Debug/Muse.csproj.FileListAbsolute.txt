@@ -11,3 +11,15 @@ C:\Users\hjk7013\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.exe
 C:\Users\hjk7013\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.pdb
 C:\Users\hjk7013\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.Form2.resources
 C:\Users\hjk7013\Documents\GitHub\Muse\Muse\Muse\obj\Debug\Muse.Form3.resources
+C:\Users\Hunter\Documents\Muse\Muse\Muse\bin\Debug\Muse.exe.config
+C:\Users\Hunter\Documents\Muse\Muse\Muse\obj\Debug\Muse.exe
+C:\Users\Hunter\Documents\Muse\Muse\Muse\obj\Debug\Muse.pdb
+C:\Users\Hunter\Documents\Muse\Muse\Muse\obj\Debug\Muse.csprojResolveAssemblyReference.cache
+C:\Users\Hunter\Documents\Muse\Muse\Muse\obj\Debug\Muse.MuseLogin.resources
+C:\Users\Hunter\Documents\Muse\Muse\Muse\obj\Debug\Muse.Form2.resources
+C:\Users\Hunter\Documents\Muse\Muse\Muse\obj\Debug\Muse.Form3.resources
+C:\Users\Hunter\Documents\Muse\Muse\Muse\obj\Debug\Muse.Form4.resources
+C:\Users\Hunter\Documents\Muse\Muse\Muse\obj\Debug\Muse.Properties.Resources.resources
+C:\Users\Hunter\Documents\Muse\Muse\Muse\obj\Debug\Muse.csproj.GenerateResource.Cache
+C:\Users\Hunter\Documents\Muse\Muse\Muse\bin\Debug\Muse.exe
+C:\Users\Hunter\Documents\Muse\Muse\Muse\bin\Debug\Muse.pdb

@@ -126,6 +126,7 @@
             this.SomethingLikedButton.TabIndex = 6;
             this.SomethingLikedButton.Text = "Something I\'d Like";
             this.SomethingLikedButton.UseVisualStyleBackColor = true;
+            this.SomethingLikedButton.Click += new System.EventHandler(this.SomethingLikedButton_Click);
             // 
             // SomethingNewButton
             // 
@@ -136,6 +137,7 @@
             this.SomethingNewButton.TabIndex = 7;
             this.SomethingNewButton.Text = "Something New";
             this.SomethingNewButton.UseVisualStyleBackColor = true;
+            this.SomethingNewButton.Click += new System.EventHandler(this.SomethingNewButton_Click);
             // 
             // ExitButton
             // 

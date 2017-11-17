@@ -66,5 +66,25 @@ namespace Muse
             form3.Closed += (s, args) => this.Close();
             form3.Show();
         }
+
+        private void SomethingLikedButton_Click(object sender, EventArgs e)
+        {
+            Controller c = new Controller();
+
+            this.Hide();
+            var form4 = new Form4(c);
+            form4.Closed += (s, args) => this.Close();
+            form4.Show();
+        }
+
+        private void SomethingNewButton_Click(object sender, EventArgs e)
+        {
+            Controller c = new Controller();
+
+            this.Hide();
+            var form4 = new Form4(c);
+            form4.Closed += (s, args) => this.Close();
+            form4.Show();
+        }
     }
 }
