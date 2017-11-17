@@ -58,31 +58,24 @@ namespace Muse
 
         private void RateSongsButton_Click(object sender, EventArgs e)
         {
-
-            Controller c = new Controller();
-
             this.Hide();
-            var form3 = new Form3(c);
+            var form3 = new Form3(controller);
             form3.Closed += (s, args) => this.Close();
             form3.Show();
         }
 
         private void SomethingLikedButton_Click(object sender, EventArgs e)
         {
-            Controller c = new Controller();
-
             this.Hide();
-            var form4 = new Form4(c);
+            var form4 = new Form4(controller);
             form4.Closed += (s, args) => this.Close();
             form4.Show();
         }
 
         private void SomethingNewButton_Click(object sender, EventArgs e)
         {
-            Controller c = new Controller();
-
             this.Hide();
-            var form4 = new Form4(c);
+            var form4 = new Form4(controller);
             form4.Closed += (s, args) => this.Close();
             form4.Show();
         }

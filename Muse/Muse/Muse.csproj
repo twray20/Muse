@@ -65,6 +65,8 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="SongDescriptor.cs" />
+    <Compile Include="Genre.cs" />
     <Compile Include="Song.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -110,6 +112,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="song_sample.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

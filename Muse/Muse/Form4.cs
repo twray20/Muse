@@ -14,16 +14,24 @@ namespace Muse
     {
 
         private Controller controller;
+        private int choice;
 
         public Form4()
         {
             InitializeComponent();
         }
 
-        public Form4(Controller c)
+        public Form4(Controller c, int which)
         {
             controller = c;
+            choice = which;
+
             InitializeComponent();
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

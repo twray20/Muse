@@ -53,6 +53,7 @@
             this.MinimizeBox = false;
             this.Name = "Form4";
             this.Text = "Song Recommendation";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

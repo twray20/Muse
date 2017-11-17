@@ -11,22 +11,24 @@ namespace Muse
         private int songID;     //Unique song ID to identify the song and retrieve information about it
         private String songName;
         private String artist;
-        private int songLength;
-        private int songYear;
-        //private List<Descriptor> descriptors;
+        private String songLength;
+        private String songYear;
+        private List<SongDescriptor> descriptors;
 
         public Song()
         {
             songID = -1;
+            descriptors = new List<SongDescriptor>();
         }
 
-        public Song(int sID, String songName, String artist, int songLength, int songYear)
+        public Song(int songID, String songName, String artist, String songLength, String songYear)
         {
-            this.songID = sID;
+            this.songID = songID;
             this.songName = songName;
             this.artist = artist;
             this.songLength = songLength;
             this.songYear = songYear;
+            descriptors = new List<SongDescriptor>();
         }
 
         public int getID()
@@ -44,20 +46,33 @@ namespace Muse
             return artist;
         }
 
-        public int getSongLength()
+        public String getSongLength()
         {
             return songLength;
         }
 
-        public int getSongYear()
+        public String getSongYear()
         {
             return songYear;
         }
 
-        //public List<Descriptor> getDescriptors()
-        //{
-        //    return descriptors;
-        //}
+        public List<SongDescriptor> getDescriptors()
+        {
+            return descriptors;
+        }
+
+        public void addDescriptor(Genre k)
+        {
+            foreach (SongDescriptor d in descriptors)
+            {
+                if (d.getGenre().getGenreName() == k.getGenreName())
+                {
+                    d.approveSong();
+                }
+            }
+            SongDescriptor newDescriptor = new SongDescriptor(this.songID, k);
+            descriptors.Add(newDescriptor);
+        }
 
     }
 }
