@@ -11,13 +11,36 @@ using System.IO;
 
 namespace Muse
 {
-    public partial class Form1 : Form
+    public partial class MuseLogin : Form
     {
+
         private Controller controller;
 
-        public Form1()
+        public MuseLogin()
         {
             InitializeComponent();
+        }
+
+        private void PasswordBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+
+            User u = new User(0, UsernameBox.Text);
+            controller.userList.Add(u);
+
+            this.Hide();
+            var form2 = new Form2(controller);
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
+        }
+
+        private void UsernameBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -27,7 +50,6 @@ namespace Muse
             InitializeGenres();
             InitializeSongDB();
             InitializeRatings();
-            Console.WriteLine(controller.getRecommendation(0).getID());
         }
 
         private void InitializeSongDB()
@@ -37,7 +59,7 @@ namespace Muse
             {
                 int id = controller.songList.Count;
                 Song s = new Song(id, TextDB[i], TextDB[i + 1], TextDB[i + 2], TextDB[i + 3]);
-                controller.songList.Add(s);                
+                controller.songList.Add(s);
             }
 
             controller.songList[0].addDescriptor(controller.genreList[5]);
@@ -119,7 +141,7 @@ namespace Muse
             controller.changeRating(1, 19, 5);
             controller.changeRating(1, 22, 4);
             controller.changeRating(1, 23, 3);
-            
+
             controller.changeRating(2, 1, 4);
             controller.changeRating(2, 2, 1);
             controller.changeRating(2, 4, 4);
@@ -133,7 +155,7 @@ namespace Muse
             controller.changeRating(2, 17, 1);
             controller.changeRating(2, 20, 1);
             controller.changeRating(2, 22, 1);
-            
+
             controller.changeRating(3, 2, 4);
             controller.changeRating(3, 3, 2);
             controller.changeRating(3, 4, 4);
@@ -146,7 +168,7 @@ namespace Muse
             controller.changeRating(3, 19, 5);
             controller.changeRating(3, 22, 5);
             controller.changeRating(3, 23, 2);
-            
+
             controller.changeRating(4, 1, 1);
             controller.changeRating(4, 2, 1);
             controller.changeRating(4, 4, 1);
