@@ -29,7 +29,7 @@ namespace Muse
         private void LoginButton_Click(object sender, EventArgs e)
         {
 
-            User u = new User(0, UsernameBox.Text);
+            User u = new User(controller.userList.Count, UsernameBox.Text);
             controller.userList.Add(u);
 
             this.Hide();

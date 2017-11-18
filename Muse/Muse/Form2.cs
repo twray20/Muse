@@ -30,7 +30,7 @@ namespace Muse
         {
             timer1.Start();
 
-            ProfileLabel.Text = controller.userList[0].getUserName();
+            ProfileLabel.Text = controller.userList[controller.userList.Count - 1].getUserName();
             TimeLabel.Text = DateTime.Now.ToLongTimeString();
             DateLabel.Text = DateTime.Now.ToLongDateString();
 
@@ -67,7 +67,7 @@ namespace Muse
         private void SomethingLikedButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form4 = new Form4(controller);
+            var form4 = new Form4(controller, 0);
             form4.Closed += (s, args) => this.Close();
             form4.Show();
         }
@@ -75,7 +75,7 @@ namespace Muse
         private void SomethingNewButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form4 = new Form4(controller);
+            var form4 = new Form4(controller, 1);
             form4.Closed += (s, args) => this.Close();
             form4.Show();
         }

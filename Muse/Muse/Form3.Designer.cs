@@ -29,22 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
-            this.songList = new System.Windows.Forms.ListBox();
+            this.songRatingList = new System.Windows.Forms.ListBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.returnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // songList
+            // songRatingList
             // 
-            this.songList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.songList.FormattingEnabled = true;
-            this.songList.Location = new System.Drawing.Point(12, 94);
-            this.songList.Name = "songList";
-            this.songList.Size = new System.Drawing.Size(308, 158);
-            this.songList.TabIndex = 0;
+            this.songRatingList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.songRatingList.FormattingEnabled = true;
+            this.songRatingList.Location = new System.Drawing.Point(12, 94);
+            this.songRatingList.Name = "songRatingList";
+            this.songRatingList.Size = new System.Drawing.Size(308, 158);
+            this.songRatingList.TabIndex = 0;
+            this.songRatingList.SelectedIndexChanged += new System.EventHandler(this.songRatingList_SelectedIndexChanged);
             // 
             // radioButton1
             // 
@@ -57,6 +59,7 @@
             this.radioButton1.Text = "1";
             this.radioButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -69,6 +72,7 @@
             this.radioButton2.Text = "2";
             this.radioButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -81,6 +85,7 @@
             this.radioButton3.Text = "3";
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -93,6 +98,7 @@
             this.radioButton4.Text = "4";
             this.radioButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton5
             // 
@@ -105,6 +111,17 @@
             this.radioButton5.Text = "5";
             this.radioButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            // 
+            // returnButton
+            // 
+            this.returnButton.Location = new System.Drawing.Point(547, 426);
+            this.returnButton.Name = "returnButton";
+            this.returnButton.Size = new System.Drawing.Size(75, 23);
+            this.returnButton.TabIndex = 6;
+            this.returnButton.Text = "Return";
+            this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
             // 
             // Form3
             // 
@@ -112,12 +129,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(634, 461);
+            this.Controls.Add(this.returnButton);
             this.Controls.Add(this.radioButton5);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.songList);
+            this.Controls.Add(this.songRatingList);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -129,11 +147,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox songList;
+        private System.Windows.Forms.ListBox songRatingList;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.Button returnButton;
     }
 }
