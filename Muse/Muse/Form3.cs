@@ -42,7 +42,13 @@ namespace Muse
             {
                 Console.WriteLine("...");
                 controller.changeRating(controller.userList.Count - 1, songRatingList.SelectedIndex, 1);
-                Console.WriteLine(controller.ratingList[songRatingList.SelectedIndex].getRating());
+                foreach (SongRating r in controller.ratingList)
+                {
+                    if (r.getSongID() == songRatingList.SelectedIndex && r.getUserID() == controller.userList.Count - 1)
+                    {
+                        Console.WriteLine(r.getRating());
+                    }
+                }
             }
             else
             {
@@ -55,7 +61,13 @@ namespace Muse
             if (radioButton2.Checked && !changedProgramatically)
             {
                 controller.changeRating(controller.userList.Count - 1, songRatingList.SelectedIndex, 2);
-                Console.WriteLine(controller.ratingList[songRatingList.SelectedIndex].getRating());
+                foreach (SongRating r in controller.ratingList)
+                {
+                    if (r.getSongID() == songRatingList.SelectedIndex && r.getUserID() == controller.userList.Count - 1)
+                    {
+                        Console.WriteLine(r.getRating());
+                    }
+                }
             }
             else
             {
@@ -68,7 +80,13 @@ namespace Muse
             if (radioButton3.Checked && !changedProgramatically)
             {
                 controller.changeRating(controller.userList.Count - 1, songRatingList.SelectedIndex, 3);
-                Console.WriteLine(controller.ratingList[songRatingList.SelectedIndex].getRating());
+                foreach (SongRating r in controller.ratingList)
+                {
+                    if (r.getSongID() == songRatingList.SelectedIndex && r.getUserID() == controller.userList.Count - 1)
+                    {
+                        Console.WriteLine(r.getRating());
+                    }
+                }
             }
             else
             {
@@ -81,7 +99,13 @@ namespace Muse
             if (radioButton4.Checked && !changedProgramatically)
             {
                 controller.changeRating(controller.userList.Count - 1, songRatingList.SelectedIndex, 4);
-                Console.WriteLine(controller.ratingList[songRatingList.SelectedIndex].getRating());
+                foreach (SongRating r in controller.ratingList)
+                {
+                    if (r.getSongID() == songRatingList.SelectedIndex && r.getUserID() == controller.userList.Count - 1)
+                    {
+                        Console.WriteLine(r.getRating());
+                    }
+                }
             }
             else
             {
@@ -94,7 +118,13 @@ namespace Muse
             if (radioButton5.Checked && !changedProgramatically)
             {
                 controller.changeRating(controller.userList.Count - 1, songRatingList.SelectedIndex, 5);
-                Console.WriteLine(controller.ratingList[songRatingList.SelectedIndex].getRating());
+                foreach (SongRating r in controller.ratingList)
+                {
+                    if (r.getSongID() == songRatingList.SelectedIndex && r.getUserID() == controller.userList.Count - 1)
+                    {
+                        Console.WriteLine(r.getRating());
+                    }
+                }
             }
             else
             {

@@ -31,15 +31,24 @@ namespace Muse
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            foreach (SongRating r in controller.ratingList)
+            {
+                if (r.getUserID() == controller.userList.Count - 1)
+                {
+                    Console.WriteLine(controller.songList[r.getSongID()].getName() + " - " + r.getRating());
+                }
+            }
             if (choice == 0)
             {
                 Song likedSong = controller.getRecommendation(controller.userList.Count - 1);
                 label1.Text = likedSong.getName() + " - " + likedSong.getArtist();
+                label2.Text = "Here's something you might like!";
             }
             else if (choice == 1)
             {
                 Song newSong = controller.getNewSong(controller.userList.Count - 1);
                 label1.Text = newSong.getName() + " - " + newSong.getArtist();
+                label2.Text = "Here's something new!";
             }
         }
 

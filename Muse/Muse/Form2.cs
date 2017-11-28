@@ -35,6 +35,15 @@ namespace Muse
             DateLabel.Text = DateTime.Now.ToLongDateString();
 
             RandomSongLabel.Text = "Light My Fire - The Doors";
+
+            List<SongRating> loadedRatingList = controller.ratingList;
+            int ratingsCount = 0;
+            foreach (SongRating s in loadedRatingList){
+                if (s.getUserID() == controller.userList.Count - 1){
+                    ratingsCount += 1;
+                }
+            }
+            SongsRatedLabel.Text = "Songs Rated: " + ratingsCount;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
